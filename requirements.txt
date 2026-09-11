@@ -1,0 +1,17 @@
+# Serving dependencies only.
+#
+# The A1 requirements.txt has ~180 packages because it carries the whole
+# training and analysis stack: jupyter, matplotlib, seaborn, spacy, gensim,
+# scikit-learn, kaggle, lime, wordcloud. None of that runs in production. A
+# prediction container needs a web server, an image decoder, and the model
+# runtime — nothing else. Every package left out is image size not downloaded,
+# cold-start time not spent, and a CVE not inherited.
+#
+# torch and torchvision are installed separately; see requirements-torch.txt.
+
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+pydantic==2.13.4
+python-multipart==0.0.32
+pillow==12.3.0
+requests==2.34.2

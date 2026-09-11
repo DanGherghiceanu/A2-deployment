@@ -1,0 +1,35 @@
+# Everything here would otherwise be uploaded to the Docker daemon as build
+# context on every single build. The chest X-ray dataset alone is over 1 GB.
+
+data/
+*.ipynb
+.ipynb_checkpoints/
+logs/
+*.log
+
+.git/
+.gitignore
+.github/
+
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+README.md
+docs/
+screenshots/
+.env
+.env.*
+
+# Keep only the checkpoint the API actually serves, not every experiment.
+models/*
+!models/resnet18_finetuned.pt

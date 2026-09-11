@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+.env.*
+
+data/
+logs/
+*.log
+.ipynb_checkpoints/
+
+.DS_Store
+.vscode/
+.idea/
+
+# Keep the served checkpoint tracked; ignore other experiments.
+models/*
+!models/README.md
+!models/resnet18_finetuned.pt

@@ -1,0 +1,14 @@
+# PyTorch, kept separate because it must come from the CPU-only wheel index.
+#
+# The default PyPI wheels bundle CUDA libraries and add roughly 2 GB to the
+# image for GPU support that a Cloud Run container cannot use. The Dockerfile
+# installs this file with:
+#
+#   pip install --index-url https://download.pytorch.org/whl/cpu -r requirements-torch.txt
+#
+# Versions are pinned to the environment the A1 model was trained in. If the
+# checkpoint fails to load with a state_dict mismatch, a torch/torchvision
+# version drift is the first thing to check.
+
+torch==2.13.0
+torchvision==0.28.0
