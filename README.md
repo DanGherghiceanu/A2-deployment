@@ -130,7 +130,9 @@ LOG_FORMAT=text uvicorn app.main:app --reload --port 8080
 Then open <http://localhost:8080>. `LOG_FORMAT=text` gives readable logs; leave
 it off in the container, where JSON is what you want.
 
+## Test the app.
 Test with possible URL : < https://upload.wikimedia.org/wikipedia/commons/8/83/Chest_X-ray_2346.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original> 
+Run test with any image (.jpeg  / .png ) from your local collection of chest x-rays.
 
 Or any other Jpeg image from files or web.
 ---
