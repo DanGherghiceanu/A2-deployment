@@ -142,6 +142,8 @@ Or any other Jpeg image from files or web.
 ```bash
 docker build -t xray-api .
 docker run -p 8080:8080 xray-api
+or
+docker run --rm -p 8080:8080 xray-api
 ```
 
 Then <http://localhost:8080>, and:
