@@ -24,7 +24,6 @@ import requests
 SAMPLE_URL = (
     "https://upload.wikimedia.org/wikipedia/commons/8/83/Chest_X-ray_2346.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
     "https://raw.githubusercontent.com/education454/"
-    r"E:\DGG_VanierCS\Block2\Data Mining Project\Dan_ML_main\AI_ML_Vanier_A1\data\raw\chest_xray_pneumonia\test\f7ghg9rpnp-1\WhatsApp Image 2021-04-15 at 10.13.14 AM.jpeg"
 )
 
 PASS = "\033[92mPASS\033[0m"
