@@ -22,8 +22,7 @@ import requests
 # A pneumonia-positive chest film from the Kaggle test split, served raw from
 # GitHub. Replace with any public image URL if this ever goes stale.
 SAMPLE_URL = (
-    "https://upload.wikimedia.org/wikipedia/commons/8/83/Chest_X-ray_2346.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
-    "https://raw.githubusercontent.com/education454/"
+    "https://raw.githubusercontent.com/DanGherghiceanu/A2-deployment/main/samples/xray-pneumonia.jpeg"
 )
 
 PASS = "\033[92mPASS\033[0m"
@@ -100,7 +99,7 @@ def test_predict_upload(base: str, image_path: Path | None, url: str) -> None:
             raw = image_path.read_bytes()
             name = image_path.name
         else:
-            raw = requests.get(url, timeout=60).content
+            raw = requests.get(url, timeout=60, headers={"User-Agent": "xray-api-test/1.0"}).content
             name = "sample.jpeg"
 
         r = requests.post(
